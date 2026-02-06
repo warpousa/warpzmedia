@@ -1,0 +1,17 @@
+name: warpedZ
+type: theme
+description: 'Custom theme for warpZmedia. Soundscapes & Visuals in Z-Space.'
+core_version_requirement: ^10 || ^11
+base theme: stark
+
+libraries:
+  - warpedZ/global
+
+regions:
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  header: Header
+  content: Content
+  footer: Footer`
+
+author: Corey Rutledge
