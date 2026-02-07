@@ -1,37 +1,52 @@
 {# page.html.twig for warpedZ #}
-{# Page top (toolbar, messages, etc.) is rendered in html.html.twig as {{ page_top }}. #}
+
+{# 
+  IMPORTANT:
+  Drupal expects the page render array to be printed as {{ page }}.
+  This ensures contextual forms, block visibility, and multilingual
+  conditions work correctly.
+#}
+
+{# We do NOT recreate <html> or <body> here — html.html.twig handles that. #}
+
+{{ page_top }}
+
 <header role="banner">
-  <div class="site-branding">
-    {% if logo %}
-      <a href="{{ path('<front>') }}" rel="home" class="site-logo">
-        <img src="{{ logo }}" alt="{{ site_name|default('Home') }}">
-      </a>
-    {% endif %}
-    {% if site_name %}
-      <a href="{{ path('<front>') }}" rel="home" class="site-name">
-        {{ site_name }}
-      </a>
-    {% endif %}
-  </div>
+  {# Branding block (from block--system-branding-block.html.twig) #}
   {% if page.header %}
     <div class="region-header">
       {{ page.header }}
     </div>
   {% endif %}
+
+  {# Primary menu region #}
   {% if page.primary_menu %}
     <nav role="navigation" aria-label="Main navigation">
       {{ page.primary_menu }}
     </nav>
   {% endif %}
 </header>
+
 <main role="main">
   <a id="main-content" tabindex="-1"></a>
-  {# Flavor toggles live near the top of main content. #}
+
+  {# Flavor toggles #}
   {% include '@warpedZ/partials/flavor-toggles.html.twig' %}
-  {{ page.content }}
+
+  {# The main content region #}
+  {% if page.content %}
+    <div class="region-content">
+      {{ page.content }}
+    </div>
+  {% endif %}
 </main>
-{% if page.footer %}
-  <footer role="contentinfo">
-    {{ page.footer }}
-  </footer>
-{% endif %}
+
+<footer role="contentinfo">
+  {% if page.footer %}
+    <div class="region-footer">
+      {{ page.footer }}
+    </div>
+  {% endif %}
+</footer>
+
+{{ page_bottom }}
