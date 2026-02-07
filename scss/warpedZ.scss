@@ -1,22 +1,104 @@
 /* SCSS Document */
+
+//////////// START ////////////
+
+//////////// IMPORT FONTS ////////////
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/////////// END IMPORT FONTS ////////////
+
+//////////// START body ////////////
 body {
+  /////////// MIXINS ///////////////
+  
+  /// Accent Flavors /// 
+  @mixin sun-plasma {
+	  --accent: #ff3366;
+	  background: linear-gradient(135deg, #ff3366, #ff6699);
+  }  
+  
+  @mixin strawberry {
+	  --accent: #ff3366;
+	  background: linear-gradient(135deg, #ff3366, #ff6699);
+  }
+  
+  @mixin chill {
+    --accent: #33ccff;
+	  background: linear-gradient(135deg, #33ccff, #0066ff);
+  }
+  
+  @mixin key-lime {
+    --accent: #ccff33;
+	  background: linear-gradient(135deg, #ccff33, #66ff66);
+  }  
+  
+  /// Fonts ///
+  
+  @mixin pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @mixin pt-sans-bold {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @mixin pt-sans-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @mixin pt-sans-bold-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  /// Transitions ///
+  
+  @mixin transition-all-third-sec-ease {
+    transition: all 0.3s ease;
+  }
+
+  /////////// END MIXINS ///////////////
+  
+  ///////////  BACKGROUND ACCENTS ///////////
 	&.sun-plasma {
-	  --accent: #ffae00;
-	  background: radial-gradient(circle, #ffae00, #ff0040);
+    @include sun-plasma;
 	}
 
 	&.strawberry {
-	  --accent: #ff3366;
-	  background: linear-gradient(135deg, #ff3366, #ff6699);
+    @include strawberry;
 	}
 
 	&.chill {
-	  --accent: #33ccff;
-	  background: linear-gradient(135deg, #33ccff, #0066ff);
+	  @include chill;
 	}
 
 	&.key-lime {
-	  --accent: #ccff33;
-	  background: linear-gradient(135deg, #ccff33, #66ff66);
-	}	
+    @include key-lime;
+	}
+  ///////////  END BACKGROUND ACCENTS ///////////
+  
+  &.transition-fx * {
+    @include transition-all-third-sec-ease;
+  }
+  
+  @include pt-sans-regular;
+  
+  form {
+    div {
+      &.form-no-label {
+        float: left;
+      }
+    }
+  }
+  
+//////////// END body ////////////
 }
+//////////// END ////////////
