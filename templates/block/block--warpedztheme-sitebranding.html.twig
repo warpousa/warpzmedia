@@ -1,0 +1,23 @@
+{# block--warpedztheme-sitebranding.html.twig #}
+
+{% extends "block.html.twig" %}
+
+{% block content %}
+  <div{{ attributes.addClass('warpedztheme-branding') }}>
+    {% if site_logo %}
+      <a href="{{ path('<front>') }}" rel="home" class="site-logo">
+        <img src="{{ site_logo }}" alt="{{ site_name }}">
+      </a>
+    {% endif %}
+
+    {% if site_name %}
+      <a href="{{ path('<front>') }}" rel="home" class="site-name">
+        {{ site_name }}
+      </a>
+    {% endif %}
+
+    {% if site_slogan %}
+      <div class="site-slogan">{{ site_slogan }}</div>
+    {% endif %}
+  </div>
+{% endblock %}

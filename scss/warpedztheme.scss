@@ -1,0 +1,132 @@
+//////////// START ////////////
+
+/////////// MIXINS ////////////
+/// Accent Flavors /// 
+
+@mixin sun-plasma {
+  --accent: #ffae00;
+  background: radial-gradient(circle, #ffae00, #ff0040);
+}  
+
+@mixin strawberry {
+  --accent: #ff3366;
+  background: linear-gradient(135deg, #ff3366, #ff6699);
+}
+
+@mixin chill {
+  --accent: #33ccff;
+  background: linear-gradient(135deg, #33ccff, #0066ff);
+}
+
+@mixin key-lime {
+  --accent: #ccff33;
+  background: linear-gradient(135deg, #ccff33, #66ff66);
+}  
+
+/// Fonts ///
+
+@mixin pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin pt-sans-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin pt-sans-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin pt-sans-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/////////// START QUERIES ////////////
+
+// Container breakpoints
+$cq-uhd:        3200px;
+$cq-qhd:        1920px;
+$cq-hd:         1080px;
+$cq-tablet-lg:   900px;
+$cq-tablet:      768px;
+$cq-mobile:      576px;
+$cq-mobile-sm:   480px;
+$cq-mobile-xsm:  360px;
+
+// Container query mixins
+@mixin cq-min($size) {
+  @container (min-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin cq-range($min, $max) {
+  @container (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}
+//////////// END QUERIES ////////////
+
+/// Transitions ///
+
+@mixin transition-all-third-sec-ease {
+  transition: all 0.3s ease;
+}
+
+/////////// END MIXINS ///////////////
+
+
+//////////// START body ////////////
+body {
+  ///////////  BACKGROUND ACCENTS ///////////
+	&.sun-plasma {
+    @include sun-plasma;
+	}
+
+	&.strawberry {
+    @include strawberry;
+	}
+
+	&.chill {
+	  @include chill;
+	}
+
+	&.key-lime {
+    @include key-lime;
+	}
+  ///////////  END BACKGROUND ACCENTS ///////////
+  
+  &.transition-fx * {
+    @include transition-all-third-sec-ease;
+  }
+  
+  @include pt-sans-regular;
+  
+  form {
+    div {
+      &.form-no-label {
+        float: left;
+      }
+    }
+  }
+
+  .toggle-warpedztheme-flavor {
+    @include cq-min($cq-tablet) {
+      scale: 1.2;
+    }
+
+    @include cq-range($cq-mobile-sm, $cq-mobile) {
+      scale: 0.9;
+    }
+  }
+//////////// END body ////////////
+}
+//////////// END ////////////

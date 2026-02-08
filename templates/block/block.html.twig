@@ -1,0 +1,13 @@
+{# Default block wrapper for warpedztheme. #}
+
+<div{{ attributes.addClass('warpedztheme-block') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+</div>

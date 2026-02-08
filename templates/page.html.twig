@@ -1,37 +1,58 @@
-{# page.html.twig for warpedZ #}
-{# Page top (toolbar, messages, etc.) is rendered in html.html.twig as {{ page_top }}. #}
+{# page.html.twig for warpedztheme #}
+
+{{ page_top }}
+
 <header role="banner">
-  <div class="site-branding">
-    {% if logo %}
-      <a href="{{ path('<front>') }}" rel="home" class="site-logo">
-        <img src="{{ logo }}" alt="{{ site_name|default('Home') }}">
-      </a>
-    {% endif %}
-    {% if site_name %}
-      <a href="{{ path('<front>') }}" rel="home" class="site-name">
-        {{ site_name }}
-      </a>
-    {% endif %}
-  </div>
   {% if page.header %}
     <div class="region-header">
       {{ page.header }}
     </div>
   {% endif %}
+
   {% if page.primary_menu %}
     <nav role="navigation" aria-label="Main navigation">
       {{ page.primary_menu }}
     </nav>
   {% endif %}
 </header>
+
+{# Highlighted/messages region (Drupal expects this BEFORE main) #}
+{% if page.highlighted %}
+  <div class="region-highlighted">
+    {{ page.highlighted }}
+  </div>
+{% endif %}
+
 <main role="main">
   <a id="main-content" tabindex="-1"></a>
-  {# Flavor toggles live near the top of main content. #}
-  {% include '@warpedZ/partials/flavor-toggles.html.twig' %}
-  {{ page.content }}
+
+  {# Breadcrumbs (optional but conventional inside <main>) #}
+  {% if breadcrumb %}
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      {{ breadcrumb }}
+    </nav>
+  {% endif %}
+
+  {# Motion toggles #}
+  {% include '@warpedztheme/partials/motion-toggle.html.twig' %}
+
+  {# Flavor toggles #}
+  {% include '@warpedztheme/partials/flavor-toggles.html.twig' %}
+
+  {# Main content region #}
+  {% if page.content %}
+    <div class="region-content">
+      {{ page.content }}
+    </div>
+  {% endif %}
 </main>
-{% if page.footer %}
-  <footer role="contentinfo">
-    {{ page.footer }}
-  </footer>
-{% endif %}
+
+<footer role="contentinfo">
+  {% if page.footer %}
+    <div class="region-footer">
+      {{ page.footer }}
+    </div>
+  {% endif %}
+</footer>
+
+{{ page_bottom }}
