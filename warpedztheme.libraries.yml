@@ -1,0 +1,9 @@
+global:
+  css:
+    theme:
+      css/warpedztheme.css: {}
+  js:
+    js/warpedztheme.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

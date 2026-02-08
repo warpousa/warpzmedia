@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {# page.html.twig for warpedZ #}
 
 {# 
@@ -11,6 +12,10 @@
 
 {{ page_top }}
 
+=======
+{# page.html.twig for warpedztheme #}
+{# Page top (toolbar, messages, etc.) is rendered in html.html.twig as {{ page_top }}. #}
+>>>>>>> Stashed changes
 <header role="banner">
   {# Branding block (from block--system-branding-block.html.twig) #}
   {% if page.header %}
@@ -29,6 +34,7 @@
 
 <main role="main">
   <a id="main-content" tabindex="-1"></a>
+<<<<<<< Updated upstream
 
   {# Motion toggles #}
   {% include '@warpedZ/partials/motion-toggle.html.twig' %}
@@ -42,6 +48,11 @@
       {{ page.content }}
     </div>
   {% endif %}
+=======
+  {# Flavor toggles live near the top of main content. #}
+  {% include '@warpedztheme/partials/flavor-toggles.html.twig' %}
+  {{ page.content }}
+>>>>>>> Stashed changes
 </main>
 
 <footer role="contentinfo">
