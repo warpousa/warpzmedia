@@ -1,6 +1,6 @@
-{# Default block wrapper for warpedZ. This preserves plugin IDs, contextual links, and config mapping.#}
+{# Default block wrapper for warpedztheme. #}
 
-<div{{ attributes }}>
+<div{{ attributes.addClass('warpedztheme-block') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>

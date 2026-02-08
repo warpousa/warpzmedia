@@ -1,6 +1,5 @@
-{# /** * @file * Default theme implementation for a region. */ #}
 {% if content %}
-  <div{{ attributes }}>
+  <div{{ attributes.addClass('warpedztheme-region') }}>
     {{ content }}
   </div>
 {% endif %}

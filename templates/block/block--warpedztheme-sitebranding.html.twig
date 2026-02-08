@@ -1,9 +1,9 @@
-{# block--system-branding-block.html.twig #}
+{# block--warpedztheme-sitebranding.html.twig #}
 
 {% extends "block.html.twig" %}
 
 {% block content %}
-  <div class="warpedZ-branding">
+  <div{{ attributes.addClass('warpedztheme-branding') }}>
     {% if site_logo %}
       <a href="{{ path('<front>') }}" rel="home" class="site-logo">
         <img src="{{ site_logo }}" alt="{{ site_name }}">

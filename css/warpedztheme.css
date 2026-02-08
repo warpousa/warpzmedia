@@ -1,5 +1,3 @@
-/* SCSS Document */
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 body {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
@@ -21,8 +19,8 @@ body {
   body form div.form-no-label {
     float: left; }
 @container (min-width: 768px) {
-  body .flavor-toggle {
+  body .toggle-warpedztheme-flavor {
     scale: 1.2; } }
 @container (min-width: 480px) and (max-width: 576px) {
-  body .flavor-toggle {
+  body .toggle-warpedztheme-flavor {
     scale: 0.9; } }

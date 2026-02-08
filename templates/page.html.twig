@@ -1,30 +1,14 @@
-<<<<<<< Updated upstream
-{# page.html.twig for warpedZ #}
-
-{# 
-  IMPORTANT:
-  Drupal expects the page render array to be printed as {{ page }}.
-  This ensures contextual forms, block visibility, and multilingual
-  conditions work correctly.
-#}
-
-{# We do NOT recreate <html> or <body> here — html.html.twig handles that. #}
+{# page.html.twig for warpedztheme #}
 
 {{ page_top }}
 
-=======
-{# page.html.twig for warpedztheme #}
-{# Page top (toolbar, messages, etc.) is rendered in html.html.twig as {{ page_top }}. #}
->>>>>>> Stashed changes
 <header role="banner">
-  {# Branding block (from block--system-branding-block.html.twig) #}
   {% if page.header %}
     <div class="region-header">
       {{ page.header }}
     </div>
   {% endif %}
 
-  {# Primary menu region #}
   {% if page.primary_menu %}
     <nav role="navigation" aria-label="Main navigation">
       {{ page.primary_menu }}
@@ -32,27 +16,35 @@
   {% endif %}
 </header>
 
+{# Highlighted/messages region (Drupal expects this BEFORE main) #}
+{% if page.highlighted %}
+  <div class="region-highlighted">
+    {{ page.highlighted }}
+  </div>
+{% endif %}
+
 <main role="main">
   <a id="main-content" tabindex="-1"></a>
-<<<<<<< Updated upstream
+
+  {# Breadcrumbs (optional but conventional inside <main>) #}
+  {% if breadcrumb %}
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      {{ breadcrumb }}
+    </nav>
+  {% endif %}
 
   {# Motion toggles #}
-  {% include '@warpedZ/partials/motion-toggle.html.twig' %}
+  {% include '@warpedztheme/partials/motion-toggle.html.twig' %}
 
   {# Flavor toggles #}
-  {% include '@warpedZ/partials/flavor-toggles.html.twig' %}
+  {% include '@warpedztheme/partials/flavor-toggles.html.twig' %}
 
-  {# The main content region #}
+  {# Main content region #}
   {% if page.content %}
     <div class="region-content">
       {{ page.content }}
     </div>
   {% endif %}
-=======
-  {# Flavor toggles live near the top of main content. #}
-  {% include '@warpedztheme/partials/flavor-toggles.html.twig' %}
-  {{ page.content }}
->>>>>>> Stashed changes
 </main>
 
 <footer role="contentinfo">
