@@ -1,7 +1,7 @@
 global:
   css:
     theme:
-      css/warpedztheme.css: {}
+      css/warpedztheme.css: { preprocess: true, rewrite: true }
   js:
     js/warpedztheme.js: {}
   dependencies:

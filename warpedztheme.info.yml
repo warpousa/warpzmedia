@@ -2,7 +2,7 @@ name: warpedztheme
 type: theme
 description: 'Custom theme for warpZmedia. Soundscapes & Visuals in Z-Space.'
 core_version_requirement: ^10 || ^11
-base theme: stark
+base theme: stable9
 
 libraries:
   - warpedztheme/global

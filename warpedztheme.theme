@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function warpedztheme_theme($existing, $type, $theme, $path) {
+  return [
+    'branding' => [
+      'render element' => 'elements',
+      'template' => 'branding',
+      'path' => $path . '/templates/misc',
+    ],
+  ];
+}
