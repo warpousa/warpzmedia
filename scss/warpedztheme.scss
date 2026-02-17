@@ -3,38 +3,67 @@
 /////////// MIXINS ////////////
 /// Accent Flavors /// 
 
-@mixin sun-plasma {
-  --accent: #ffae00;
-  background: radial-gradient(circle, #ffae00, #ff0040);
-}  
+//@mixin sun-plasma {
+//  --accent: #ffae00;
+//  background: radial-gradient(circle, #ffae00, #ff0040);
+//}
+//
+//@mixin strawberry {
+//  --accent: #ff3366;
+//  background: linear-gradient(135deg, #ff3366, #ff6699);
+//}
+//
+//@mixin chill {
+//  --accent: #33ccff;
+//  background: linear-gradient(135deg, #33ccff, #0066ff);
+//}
+//
+//@mixin key-lime {
+//  --accent: #ccff33;
+//  background: linear-gradient(135deg,#cf3,#0c280c);
+//}
 
-@mixin strawberry {
-  --accent: #ff3366;
-  background: linear-gradient(135deg, #ff3366, #ff6699);
+
+// Backgrounds - Random Classes ///
+
+@mixin random-backgrounds {
+  &.bg_img1 {
+    background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg1.jpg");
+  }
+  &.bg_img2 {
+    background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg2.jpg");
+  }
+  &.bg_img3 {
+    background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg3.jpg");
+  }
+  &.bg_img4 {
+    background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg4.jpg");
+  }
+  &.bg_img5 {
+    background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg5.jpg");
+  }
 }
 
-@mixin chill {
-  --accent: #33ccff;
-  background: linear-gradient(135deg, #33ccff, #0066ff);
-}
+/// Background Alignments ///
 
-@mixin key-lime {
-  --accent: #ccff33;
-  background: linear-gradient(135deg,#cf3,#0c280c);
+@mixin background-align {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  min-height: 100vh;  
 }
-
-// Background Alignments ///
 
 @mixin main-bgprops {
-    content: "";
-    position: fixed;
-    inset: 0;
-//    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
+  content: "";
+  position: fixed;
+  inset: 0;
+//  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
 }
 
 /// Fonts ///
@@ -100,43 +129,45 @@ $cq-mobile-xsm:  360px;
 //////////// START body ////////////
 body {
   position: relative;
-  margin: 0;  
+  margin: 0;
+  @include background-align;
+  @include random-backgrounds;
 
 //  &::before {
 //    content: "";
 //  }
   
 	&.sun-plasma {
-    @include sun-plasma;
-    &::before { 
+//    @include sun-plasma;
+    
+    &::before {
       background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg1.jpg");
-      filter: hue-rotate(170deg) brightness(0.8);
       @include main-bgprops;
-    }  
+    }
 	}
 
 	&.strawberry {
-    @include strawberry;
-    &::before { 
+//    @include strawberry;
+    &::before {
       background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg2.jpg");
       filter: hue-rotate(80deg) brightness(0.8);
       @include main-bgprops;
     }
-    .warpedztheme-block {
+    .warpedztheme-branding {
       img {
         filter: hue-rotate(508deg) brightness(1.23) saturate(1.3) sepia(0.2) invert(1);
-      }    
+      }
     }
   }
 
 	&.chill {
-	  @include chill;
+//	  @include chill;
     &::before { 
       background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg3.jpg");
       filter: hue-rotate(290deg) brightness(0.8);
       @include main-bgprops;
     }    
-    .warpedztheme-block {
+    .warpedztheme-branding {
       img {
         filter: hue-rotate(706deg) invert(0.9) brightness(1.5) sepia(0.1);
       } 
@@ -144,13 +175,13 @@ body {
   }
 
 	&.key-lime {
-    @include key-lime;
+//    @include key-lime;
     &::before { 
       background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg4.jpg");
       filter: hue-rotate(175deg) brightness(0.8); 
       @include main-bgprops;
     }    
-    .warpedztheme-block {
+    .warpedztheme-branding {
       img {
         filter: hue-rotate(50deg) brightness(1.8) saturate(1.2) contrast(1.3) sepia(0.1);
       }

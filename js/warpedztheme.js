@@ -41,10 +41,28 @@
   }
 
   // ------------------------------
+  // Random Background Assignment
+  // ------------------------------
+  function applyRandomBackground() {
+    const body = document.body;
+    const bgClasses = ["bg_img1", "bg_img2", "bg_img3", "bg_img4", "bg_img5"];
+
+    // Remove any existing bg_imgX classes
+    bgClasses.forEach(cls => body.classList.remove(cls));
+
+    // Pick a random one
+    const randomClass = bgClasses[Math.floor(Math.random() * bgClasses.length)];
+
+    // Apply it
+    body.classList.add(randomClass);
+  }  
+    
+  // ------------------------------
   // Drupal Behavior
   // ------------------------------
   Drupal.behaviors.warpedztheme = {
     attach(context) {
+      
       // --------------------------
       // Ensure a flavor is always set
       // --------------------------
@@ -76,6 +94,11 @@
         applyMotionPreference(savedMotion);
       }
 
+      // --------------------------
+      // Random background image
+      // --------------------------
+      applyRandomBackground();      
+      
       // --------------------------
       // Flavor Toggle Buttons
       // --------------------------
