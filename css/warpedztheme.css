@@ -8,7 +8,9 @@ body {
   min-height: 100vh;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+  /* Modal backdrop */
+  /* Modal container */ }
   body.bg_img1 {
     --bg-img: url(/themes/custom/warpedztheme/css/img/warpedztheme_img_bg1.jpg); }
   body.bg_img2 {
@@ -66,16 +68,6 @@ body {
     margin: 0;
     padding: 0;
     z-index: -1; }
-    body.key-lime::before.bg_img1 {
-      background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg1.jpg"); }
-    body.key-lime::before.bg_img2 {
-      background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg2.jpg"); }
-    body.key-lime::before.bg_img3 {
-      background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg3.jpg"); }
-    body.key-lime::before.bg_img4 {
-      background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg4.jpg"); }
-    body.key-lime::before.bg_img5 {
-      background: url("/themes/custom/warpedztheme/css/img/warpedztheme_img_bg5.jpg"); }
   body.key-lime .warpedztheme-branding img {
     filter: hue-rotate(50deg) brightness(1.8) saturate(1.2) contrast(1.3) sepia(0.1); }
   body.transition-fx * {
@@ -92,6 +84,67 @@ body {
     cursor: pointer; }
   body form div.form-no-label {
     float: left; }
+  body .warpz-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9990;
+    /* Show modal */ }
+    body .warpz-modal-backdrop.is-active {
+      display: flex; }
+  body .warpz-modal {
+    background: rgba(100, 100, 100, 0.9);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: min(90%, 480px);
+    outline: 1px solid gray;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    text-align: left;
+    /* Modal title */
+    /* Buttons */ }
+    body .warpz-modal a {
+      color: lightgray;
+      padding: 1px 5px 3px 5px;
+      border-radius: 8px;
+      white-space: nowrap; }
+      body .warpz-modal a:hover {
+        background: grey;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        text-decoration: none; }
+      body .warpz-modal a:focus, body .warpz-modal a:active {
+        background: darkgray;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        color: black; }
+    body .warpz-modal h1 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #fff; }
+    body .warpz-modal .button {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      margin-right: 0.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600; }
+    body .warpz-modal .button--primary {
+      background: rgba(155, 0, 0, 0.5);
+      color: #fff;
+      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+      margin-top: 15px; }
+      body .warpz-modal .button--primary:hover {
+        background: rgba(205, 0, 0, 0.9);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+      body .warpz-modal .button--primary:focus, body .warpz-modal .button--primary:active {
+        background: rgba(205, 0, 0, 0.95);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45); }
+    body .warpz-modal .button--secondary {
+      background: #555;
+      color: #fff; }
 @container (min-width: 768px) {
   body .toggle-warpedztheme-flavor {
     scale: 1.2; } }

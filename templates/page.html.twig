@@ -26,20 +26,21 @@
 <main role="main">
   <a id="main-content" tabindex="-1"></a>
 
-  {# Breadcrumbs (optional but conventional inside <main>) #}
   {% if breadcrumb %}
     <nav class="breadcrumb" aria-label="Breadcrumb">
       {{ breadcrumb }}
     </nav>
   {% endif %}
 
-  {# Motion toggles #}
-  {% include '@warpedztheme/partials/motion-toggle.html.twig' %}
+  {% if page.help %}
+    <div class="region-help">
+      {{ page.help }}
+    </div>
+  {% endif %}
 
-  {# Flavor toggles #}
+  {% include '@warpedztheme/partials/motion-toggle.html.twig' %}
   {% include '@warpedztheme/partials/flavor-toggles.html.twig' %}
 
-  {# Main content region #}
   {% if page.content %}
     <div class="region-content">
       {{ page.content }}

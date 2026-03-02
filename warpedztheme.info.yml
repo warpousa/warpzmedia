@@ -15,6 +15,7 @@ regions:
   secondary_menu: 'Secondary menu'
   highlighted: Highlighted
   breadcrumb: Breadcrumb
+  help: Help
   content: Content
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'

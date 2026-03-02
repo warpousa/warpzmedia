@@ -1,0 +1,31 @@
+{#
+  confirm-form.html.twig
+  Accessible modal wrapper for Drupal confirm forms.
+#}
+
+<div class="warpz-modal-backdrop is-active">
+  <div class="warpz-modal" role="dialog" aria-modal="true" tabindex="0">
+
+    {% if title %}
+      <h1 id="warpz-modal-title" class="warpz-modal-title">{{ title }}</h1>
+    {% endif %}
+
+    {# Fix tabindex on the action buttons #}
+    {% if form.actions %}
+      {% if form.actions.submit %}
+        {% set submit = form.actions.submit %}
+        {% set submit = submit|merge({'#attributes': submit['#attributes']|merge({'tabindex': 0})}) %}
+        {% set form = form|merge({'actions': form.actions|merge({'submit': submit})}) %}
+      {% endif %}
+
+      {% if form.actions.cancel %}
+        {% set cancel = form.actions.cancel %}
+        {% set cancel = cancel|merge({'#attributes': cancel['#attributes']|merge({'tabindex': 0})}) %}
+        {% set form = form|merge({'actions': form.actions|merge({'cancel': cancel})}) %}
+      {% endif %}
+    {% endif %}
+
+    {{ form }}
+
+  </div>
+</div>
