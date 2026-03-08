@@ -9,6 +9,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: white;
   /* Modal backdrop */
   /* Modal container */ }
   body.bg_img1 {
@@ -72,16 +73,200 @@ body {
     filter: hue-rotate(50deg) brightness(1.8) saturate(1.2) contrast(1.3) sepia(0.1); }
   body.transition-fx * {
     transition: all 0.3s ease; }
+  body div.warpedztheme-flavors {
+    padding: 25px;
+    max-width: 33%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 999;
+    left: 70%;
+    border-radius: 15px 15px 0 0;
+    background: rgba(100, 100, 100, 0.3);
+    backdrop-filter: blur(4px);
+    border: 2px solid #636363; }
+    body div.warpedztheme-flavors button {
+      cursor: pointer; }
+      body div.warpedztheme-flavors button.toggle-warpedztheme-flavor {
+        margin: 10px 15px;
+        padding: 20px;
+        border: none;
+        border-radius: 27px;
+        height: 100px;
+        width: 150px; }
+      body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:first-of-type {
+        background-color: #fa751c;
+        background-image: url(/themes/custom/warpedztheme/css/img/icon/sunplasma-graphic.png);
+        background-size: 65%;
+        background-repeat: no-repeat;
+        background-position: 32px -10px;
+        color: white;
+        display: flex;
+        filter: brightness(0.8);
+        flex-direction: column-reverse;
+        font-size: 1.1rem;
+        text-shadow: 0 0 3px #ff3c00;
+        border: solid 3px #ffe0d6;
+        box-shadow: 4px 5px 1px #7b0600; }
+        body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:first-of-type:hover {
+          background-size: 72%;
+          background-position: 27px -13px;
+          border: solid 3px #fce8e2;
+          box-shadow: 4px 5px 1px #561500;
+          color: #6b1000;
+          filter: brightness(0.93); }
+        body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:first-of-type:active, body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:first-of-type:focus {
+          background-size: 73%;
+          background-position: 27px -13px;
+          border: 3px solid white;
+          position: relative;
+          top: 0.1rem;
+          box-shadow: 2px 2px 1px black;
+          filter: brightness(1); }
+      body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(2) {
+        background-color: #fa4f68;
+        background-image: url(/themes/custom/warpedztheme/css/img/icon/strawberry-graphic.png);
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: 28px -2px;
+        color: white;
+        display: flex;
+        flex-direction: column-reverse;
+        filter: brightness(0.8);
+        box-shadow: 4px 5px 1px #772600;
+        border: 3px solid #ffcad1;
+        text-shadow: 0 0 3px #a30000;
+        font-size: 1.05rem; }
+        body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(2):hover {
+          background-size: 67%;
+          background-position: 23px -6px;
+          border: 3px solid #ffdce1;
+          box-shadow: 4px 5px 1px #461701;
+          color: #8a0038;
+          filter: brightness(0.93); }
+        body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(2):active, body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(2):focus {
+          background-size: 68%;
+          background-position: 23px -6px;
+          border: 3px solid white;
+          color: black;
+          position: relative;
+          top: 0.1rem;
+          box-shadow: 2px 2px 1px black;
+          filter: brightness(1); }
+      body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(3) {
+        background-color: #0060e3;
+        background-image: url(/themes/custom/warpedztheme/css/img/icon/chill-graphic.png);
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: 34px -2px;
+        color: white;
+        display: flex;
+        flex-direction: column-reverse;
+        filter: brightness(0.8);
+        box-shadow: 5px 6px 2px #023c8c;
+        border: 3px solid #3bc2ff;
+        text-shadow: 1px 1px 3px #c2ecff;
+        font-size: 1.05rem; }
+        body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(3):hover {
+          background-size: 65%;
+          background-position: 30px -5px;
+          border: 3px solid #81d8ff;
+          box-shadow: 5px 6px 2px #00104a;
+          color: #002737;
+          filter: brightness(0.93); }
+        body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(3):active, body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(3):focus {
+          background-size: 66%;
+          background-position: 30px -5px;
+          border: 3px solid white;
+          color: black;
+          position: relative;
+          top: 0.1rem;
+          box-shadow: 2px 2px 1px black;
+          filter: brightness(1); }
+      body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(4) {
+        background-color: #e1fe13;
+        background-image: url(/themes/custom/warpedztheme/css/img/icon/keylime-graphic.png);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 35px -2px;
+        color: white;
+        display: flex;
+        flex-direction: column-reverse;
+        filter: brightness(0.8);
+        box-shadow: 5px 6px 2px #006d00;
+        border: 3px solid #76ca04;
+        text-shadow: 1px 1px 3px #007400;
+        font-size: 1.02rem;
+        -webkit-text-stroke: 0.025rem #3f7500; }
+        body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(4):hover {
+          background-size: 57%;
+          background-position: 31px -4px;
+          border: 3px solid #76ca04;
+          box-shadow: 5px 6px 2px #004a00;
+          color: green;
+          filter: brightness(0.93);
+          text-shadow: 1px 1px 2px #003900; }
+        body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(4):active, body div.warpedztheme-flavors button.toggle-warpedztheme-flavor:nth-of-type(4):focus {
+          background-size: 58%;
+          background-position: 31px -4px;
+          border: 3px solid white;
+          color: black;
+          position: relative;
+          top: 0.1rem;
+          box-shadow: inset 0 0 10px #71ac02;
+          filter: brightness(1);
+          text-shadow: 1px 1px 2px #003900; }
+  body div.warpedztheme-region .views-element-container {
+    background: rgba(200, 200, 200, 0.1);
+    margin: 25px 0;
+    padding: 15px 5px; }
+  body div dl.list-group {
+    background: rgba(200, 200, 200, 0.1);
+    margin: 25px 0;
+    padding: 15px 5px; }
+  body a.tabledrag-handle {
+    transform: scale(140%); }
+    body a.tabledrag-handle:active .handle, body a.tabledrag-handle:focus .handle, body a.tabledrag-handle:focus-within .handle {
+      background-color: white; }
+    body a.tabledrag-handle .handle {
+      width: 10px;
+      height: 10px;
+      margin: 0.001rem 1.4rem 0.001rem 1.8rem;
+      padding: 0.7rem 0.5rem 0.3rem 0.5rem;
+      background: url(/core/misc/icons/787878/move.svg) no-repeat 5px 5px;
+      border-radius: 50px;
+      border: 1px solid #cccaca;
+      background-color: #3f3d3d; }
+      body a.tabledrag-handle .handle:hover {
+        background-color: lightgray; }
+      body a.tabledrag-handle .handle:active, body a.tabledrag-handle .handle:focus {
+        background-color: white; }
+  body table .dropbutton-toggle button {
+    height: 2.855rem;
+    border-radius: 0 5px 0 0; }
+    body table .dropbutton-toggle button:hover {
+      background-color: #666; }
+    body table .dropbutton-toggle button:active, body table .dropbutton-toggle button:focus {
+      background-color: #787878; }
+    body table .dropbutton-toggle button span {
+      transition: none; }
   body form select, body form input {
     cursor: pointer; }
-  body form select.form-select {
-    cursor: pointer;
-    background: white;
-    border: 1px solid slategray;
-    border-radius: 5px;
-    padding: 7px; }
-  body form select option {
-    cursor: pointer; }
+  body form select {
+    box-shadow: 0px 0px 48px 0px rgba(0, 0, 0, 0.1); }
+    body form select.form-select {
+      cursor: pointer;
+      background: #5a5555;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      padding: 9px 7px 15px 7px;
+      color: #eaeaea;
+      height: 47px;
+      margin-top: 9px; }
+      body form select.form-select:hover, body form select.form-select:active, body form select.form-select:focus {
+        color: white;
+        background: #706b6b; }
+    body form select option {
+      cursor: pointer; }
   body form div.form-no-label {
     float: left; }
   body .warpz-modal-backdrop {
@@ -110,7 +295,8 @@ body {
       color: lightgray;
       padding: 1px 5px 3px 5px;
       border-radius: 8px;
-      white-space: nowrap; }
+      white-space: nowrap;
+      text-decoration: none; }
       body .warpz-modal a:hover {
         background: grey;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -151,34 +337,50 @@ body {
 @container (min-width: 480px) and (max-width: 576px) {
   body .toggle-warpedztheme-flavor {
     scale: 0.9; } }
-  body .block-admin-display-form table.responsive-enabled {
-    width: 100%;
-    overflow: auto;
-    white-space: nowrap;
-    display: block;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 25px;
-    max-width: 1280px; }
-    body .block-admin-display-form table.responsive-enabled th {
-      padding: 10px 94px 20px 78px; }
-    body .block-admin-display-form table.responsive-enabled tbody {
-      border-spacing: 0;
-      display: table;
-      padding-bottom: 35px;
-      padding-left: 25px; }
-      body .block-admin-display-form table.responsive-enabled tbody tr:nth-of-type(even) {
-        background: rgba(255, 255, 255, 0.4); }
-      body .block-admin-display-form table.responsive-enabled tbody tr:nth-of-type(odd) {
-        background: rgba(255, 255, 255, 0.95); }
-      body .block-admin-display-form table.responsive-enabled tbody tr td {
-        padding: 10px 125px 42px 10px; }
-        body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget {
-          background: white;
-          padding: 5px 10px;
-          border-radius: 5px;
-          box-shadow: 0px 0px 48px 0px rgba(0, 0, 0, 0.1);
-          border: 1px solid lightslategray;
-          cursor: pointer;
-          width: 140px; }
-          body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget ul.dropbutton li {
-            margin-bottom: 8px; }
+  body .block-admin-display-form {
+    color: white; }
+    body .block-admin-display-form a {
+      color: #e4e4e4; }
+    body .block-admin-display-form table.responsive-enabled {
+      border: solid 1px gray;
+      width: 100%;
+      overflow: auto;
+      white-space: nowrap;
+      display: block;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 25px;
+      max-width: 1280px; }
+      body .block-admin-display-form table.responsive-enabled th {
+        padding: 10px 94px 20px 78px; }
+      body .block-admin-display-form table.responsive-enabled tbody {
+        border-spacing: 0;
+        display: table;
+        padding-bottom: 35px;
+        padding-left: 25px; }
+        body .block-admin-display-form table.responsive-enabled tbody tr:nth-of-type(even) {
+          background: rgba(255, 255, 255, 0.05); }
+        body .block-admin-display-form table.responsive-enabled tbody tr:nth-of-type(odd) {
+          background: rgba(255, 255, 255, 0.1); }
+        body .block-admin-display-form table.responsive-enabled tbody tr td {
+          padding: 10px 125px 42px 10px; }
+          body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget {
+            background: #5a5555;
+            padding: 6px 10px 3px 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 48px 0px rgba(0, 0, 0, 0.1);
+            border: 1px solid #b9b9b9;
+            cursor: pointer;
+            width: 140px; }
+            body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget ul.dropbutton {
+              color: lightgray; }
+              body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget ul.dropbutton li {
+                margin-bottom: 8px; }
+                body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget ul.dropbutton li a {
+                  text-decoration: none;
+                  padding: 3px 3px 5px 5px;
+                  border-radius: 7px; }
+                  body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget ul.dropbutton li a:hover, body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget ul.dropbutton li a:active, body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget ul.dropbutton li a:focus {
+                    color: white;
+                    background: #706b6b; }
+                body .block-admin-display-form table.responsive-enabled tbody tr td .dropbutton-widget ul.dropbutton li button span.dropbutton-arrow {
+                  color: #e1e1e1; }
